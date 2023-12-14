@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <style>
+      .boujee-text {
+        --bg-size: 500%;
+        --color-one: #5438DC;
+        --color-two: #3AECAB;
+        --color-three: #f21d76;
+        --color-four: #f2481d;
+        background: linear-gradient(
+                      90deg,
+                      var(--color-one),
+                      var(--color-two),
+                      var(--color-one),
+                      var(--color-three),
+                      var(--color-four),
+                      var(--color-one)
+                    ) 0 0 / var(--bg-size) 100%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: move-bg 40s infinite linear;
+      }
+
+      @keyframes move-bg {
+        to {
+        background-position: var(--bg-size) 0;
+        }
+      }
+
+      .normal-img {
+        margin-left: 0;
+        width: 80%;
+      }
+      .code-quote {
+        background-color: rgb(48, 48, 48);
+        color: white;
+        width: 85%;
+        overflow: scroll;
+      }
+
+      #tag {
+        color: blue;
+        font-weight: 900;
+      }
+
+    </style>
+  </head>
+  <body style="overflow-x: hidden;">
+    <ul>
+      <li><a href="about.html">     About     </a></li>
+      <li><a href="contact.html">   Contact   </a></li>
+      <li><a href="experience.html">Career    </a></li>
+      <li><a class="active" href="tutorials.html"> Tutorials </a></li>
+      <li><a href="projects.html">  Projects  </a></li>
+      <li><a href="home.html">Home</a></li>
+      <li class="logo"><img src="images/david-logo.png"></li>
+    </ul>
+    
+    <div class="image-container"><img src="images/html-header-image.png"></div>
+
+    <div class="content" style="padding-top: 10vh;">
+
+      <h1>Welcome to HTML!</h1>
+
+    <p>
+      HTML stands for Hypertext Markup Language, and is the foundational language of all websites!
+      Since HTML is a markup language, it's not a programming language in the traditional sense. HTML's purpose
+      is to organize and provide the bare-bones structure to web content. Think of it like a skeleton; a skeleton
+      organizes organs into various areas of your body, and it also provides a structure for those organs to attach to
+      and work from. It keeps stuff like eyes, ears, and your brain in the head; the heart, stomache, and lungs in the body;
+      and toes and muscles in the foot.
+    </p>
+    <p>
+      Although you <i>could</i> make a fully functioning website purely with HTML, just 
+      like how you wouldn't consider a skeleton a complete and finished person, we don't typically see websites
+      made with <i>only</i> HTML. We use other tools to build upon the structure that HTML gives us, such as CSS and JavaScript.
+      However, since this tutorial is focused on giving you an introductory understanding of HTML itself, we won't be diving 
+      into those other tools just yet (although keep a lookout for new programming language tutorials!).
+    </p>
+
+
+    <br>
+    <p>
+      First, let's get started with the software you'll need for this tutorial.
+    </p>
+
+    <h2>What You'll Need</h2>
+    <ul id="list">
+      <li id="list">A web browser</li>
+      <li id="list">An IDE</li>
+    </ul>
+
+    <p>
+      And that's it! While the second one may sound intimidating, don't worry; once you get started working with it,
+      it'll all be pretty straightforward.
+    </p>
+    <p>
+      Let's take a look at each of these items.
+    </p>
+
+    <h3>Web Browser</h3>
+    <p>
+      Believe it or not, a web browser's job isn't just for surfing the web; it's used to develop websites as well!
+    </p>
+    <p>
+      This helps unveil what a web browser truly does; a web browser receives a website's code and translates it
+      into the website that you end up seeing on your screen. This is the difference between a web browser and a 
+      search engine; a search engine fetches websites relevant to what you typed in the searchbar, while 
+      a web browser takes the code from the website that the search engine found and puts it in a format that you 
+      can see.
+    </p>
+
+    <h3>IDE</h3>
+    <p>
+      IDE stands for "Integrated Development Environment," which might sound scary and intimidating, but
+      it's just something that can run and edit code, all bundled into one handy piece of software!
+    </p>
+    <br>
+    <p>
+      I will be using Firefox and Visual Studio Code as my web browser and IDE for this tutorial, however most web 
+      developers use a combination of Google Chrome and Visual Studio Code; although any web browser 
+      and HTML IDE will work just fine. <br><br>You can download Visual Studio Code <a class="link boujee-text" href="https://code.visualstudio.com/download" target="_blank">here.</a>
+    </p>
+    <br><br>
+
+
+    <h1>Creating Your First HTML File</h1>
+    <p>
+      Before you open your fancy new IDE, we first need to establish a directory where we will keep our HTML files.
+      A directory is just a fancy way of saying 'folder' and is just a place to store data such as text files or images.
+    </p>
+    <p>
+      Go ahead and open File Explorer (or Finder, if you're using a Mac) and choose a place you'd like to store 
+      your HTML file(s). 
+    </p>
+    <div class="normal-img">
+      <img src="images/file-explorer1.png">
+      <img src="images/file-explorer2.png">
+    </div>
+    <br>
+    <p>
+      Now remember where you put this folder, as we will need to find it later when we open up our IDE.
+    </p>
+
+    <br>
+    <h2>Getting to Know Your IDE</h2>
+    <p>
+      Now that we've created our directory (folder), go ahead and open up Visual Studio Code. 
+      You should see something like the image below. 
+      <br>
+      <i>(Note: if you are using a different IDE, you 
+      may see something different)</i>
+      <br>
+      <br>
+      Click on <b>Open Folder...</b>
+    </p>
+    <br>
+    <div class="normal-img">
+      <img  src="images/vs-code-welcome-page.png" alt="Visual Studio Code welcome page">
+    </div>
+    <br>
+    <br>
+    <p>
+      This will open up File Explorer. Go and find the folder we just made, select it <i>(don't double click it!)</i>
+      and then click the 'Select' button in the bottom right corner of the File Explorer window.
+    </p>
+    <br>
+    <div class="normal-img">
+      <img src="images/file-explorer3.png">
+    </div>
+    <br>
+    <br>
+    <p>
+      It will then ask you if you trust the authors of the selected folder. Since we created the folder (and I'm assuming you
+      trust yourself to not put malicious code in your own folder) go and click 'Yes, I trust the authors'.
+    </p>
+    <p>
+      Now click on the icon marked in the image below. You will then be prompted to name the new file. <br>
+      This is an important part, as how you name the file will determine the type of file it is. <br>
+    </p>
+    <br>
+    <div class="normal-img">
+      <img src="images/vs-code-new-file.png">
+    </div>
+    <br>
+    <br>
+    <p>
+      Name this file "index.html". As you type '.html', the icon to the left of it should change to '<>'.
+    </p>
+    <p>
+      Now you are ready to start writing HTML!
+    </p>
+    <br>
+    <br>
+    <br>
+    <h1>A Body of Tags</h1>
+    <p>
+      In our analogy, if HTML is the skeleton, its tags are the bones. Tags are the building 
+      blocks of HTML, each serving a specific purpose. For instance, a <i>&lt;p&gt;</i> tag represents a 
+      paragraph, while an <i>&lt;h1&gt;</i> tag is a heading. These tags work together to 
+      create a cohesive structure for your web content.
+    </p>
+    <br>
+    <div class="code-quote">
+    <blockquote><pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Webpage&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to My Webpage!&lt;/h1&gt;
+        &lt;p&gt;This is a paragraph of text on my webpage.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code></pre></blockquote>
+    </div>
+    <br>
+    <br>
+    <h2>Anatomy of a Webpage</h2>
+    <p>
+      Let's break down the HTML structure in the above example.
+    </p>
+    <br>
+    <ul id="list">
+      <li id="list"><b id="tag"><code>&lt;!DOCTYPE html&gt;</code></b>: This declaration tells the browser that we're using HTML5, the latest version of HTML.</li>
+      <li id="list"><b id="tag"><code>&lt;html&gt;</code></b>: The root element, encapsulating the entire webpage.</li>
+      <li id="list"><b id="tag"><code>&lt;head&gt;</code></b>: Contains meta-information about the document, such as the title.</li>
+      <li id="list"><b id="tag"><code>&lt;title&gt;</code></b>: Sets the title displayed in the browser tab.</li>
+      <li id="list"><b id="tag"><code>&lt;body&gt;</code></b>: Houses the content of your webpage.</li>
+      <li id="list"><b id="tag"><code>&lt;h1&gt;</code></b> and <code>&lt;p&gt;</code>: Headings and paragraphs, examples of HTML elements.</li>
+    </ul>
+    <br>
+    <br>
+    <h2>More Than Just HTML?</h2>
+
+    <p>Sure, you could make a simple website using only HTML, 
+      but it's like having a house with just walls—functional 
+      but lacking style. We enhance our websites with CSS (Cascading Style Sheets) 
+      for design and JavaScript for interactivity. They're the interior decorators 
+      and electricians of our digital space.</p>
+
+    <br>
+    <br>
+    <h1>Congratulations!</h1>
+    <p>
+      You've taken your first steps into the captivating world of HTML! 
+      You now understand the essential structure of a webpage, from the doctype declaration 
+      to the body content. Remember, HTML is the foundation upon which the digital realm is 
+      built, and your journey has just begun. As you continue to explore and experiment, 
+      keep an eye out for the next chapters where we'll dive deeper into the art of crafting 
+      stylish designs with CSS and adding interactivity with JavaScript. Happy coding, 
+      and may your web adventures be both exciting and rewarding!
+    </p>
+    <br>
+    <h2>Further Resources</h2>
+    <p>
+      <a class="link boujee-text" href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank">HTML & CSS by SuperSimpleDev</a>
+      <br>
+      <a class="link boujee-text" href="https://www.w3schools.com/html/" target="_blank">W3 Schools</a>
+      <br>
+      <a class="link boujee-text" href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML: Wikipedia</a>
+    </p>
+
+
+  </div>
+
+    <br style="margin-top: 10vh;">
+
+
+    <div class="footer" style="margin-top: 5vw;">
+      <div class="hl"></div>
+      <img class="footer-logo" src="images/david-logo.png">
+      <div class="hl-right"></div>
+      <div class="copyright">© David Mason, 2023</div>
+    </div>
+
+  </body>
+</html>

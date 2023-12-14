@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+      .page-header-large {
+        font-size: 14vw; 
+        margin-top: -18%;
+      }
+
+      .page-header-thin {
+        font-weight:100;
+      }
+
+      .boujee-text {
+        --bg-size: 500%;
+        --color-one: #5438DC;
+        --color-two: #3AECAB;
+        --color-three: #f21d76;
+        --color-four: #f2481d;
+        background: linear-gradient(
+                      90deg,
+                      var(--color-one),
+                      var(--color-two),
+                      var(--color-one),
+                      var(--color-three),
+                      var(--color-four),
+                      var(--color-one)
+                    ) 0 0 / var(--bg-size) 100%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: move-bg 40s infinite linear;
+      }
+
+      @keyframes move-bg {
+        to {
+        background-position: var(--bg-size) 0;
+        }
+      }
+
+      .graphic-div {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        margin-top: 5vh;
+        width: 103%;
+        margin-left: -3%;
+        background-size: cover;
+      }
+
+      .graphic-div-header {
+        max-width: 60%;
+        margin-top: 2%;
+        margin-left: 6.5vw;
+        font-size: 2.7vw;
+        transition: 0.5s;
+      }
+      .graphic-div-header:hover {
+        text-shadow: -5px 10px rgb(170, 45, 93);
+        translate: 5px -10px;
+        color: #e0d0ff;
+      }
+
+      .alt-header-shadow {
+        transition: 0.5s;
+      }
+      .alt-header-shadow:hover {
+        text-shadow: -5px 10px rgb(63, 33, 133);
+        translate: 5px -10px;
+        color: #57ffdb;
+      }
+
+      .graphic-body {
+        max-width: 55%;
+        margin-left: 9vw;
+        padding-bottom: 12vw;
+        font-size: 2.7vw;
+        font-weight: 100;
+        transition: 0.2s;
+      }
+      .graphic-body:hover {
+        text-shadow: -1px 2px rgb(170, 45, 93);
+        translate: 1px -2px;
+      }
+
+      .alt-body-shadow {
+        transition: 0.2s;
+      }
+      .alt-body-shadow:hover {
+        text-shadow: -1px 2px rgb(22, 13, 99);
+        translate: 1px -2px;
+      }
+
+      .graphic-transition {
+        margin: 0;
+        padding: 0;
+        margin-left: -10vw;
+        margin-top: -8vw;
+        margin-bottom: -10vw;
+      }
+
+      .graphic-div-header-right {
+        text-align: right;
+        float: right;
+        max-width: 60%;
+        margin-top: 2%;
+        margin-right: 3.5vw;
+        font-size: 2.7vw;
+        transition: 0.5s;
+      }
+      .graphic-div-header-right:hover {
+        text-shadow: 5px -10px rgb(170, 45, 93);
+        translate: -5px 10px;
+        color: #3AECAB;
+      }
+
+      .graphic-body-right {
+        text-align: right;
+        float: right;
+        max-width: 55%;
+        margin-right: 6vw;
+        padding-bottom: 12vw;
+        font-size: 2.7vw;
+        font-weight: 100;
+        transition: 0.2s;
+      }
+      .graphic-body-right:hover {
+        text-shadow: 1px -2px rgb(68, 5, 29);
+        translate: -1px 2px;
+      }
+
+
+
+    </style>
+  </head>
+
+
+ <body style="overflow-x: hidden;">
+
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="experience.html">Career</a></li>
+      <li><a href="tutorials.html">Tutorials</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a class="active" href="home.html">Home</a></li>
+      <li class="logo"><img src="images/david-logo.png"></li>
+    </ul>
+    <div>
+      <div class="image-container">
+        <img class="hero-img" src="images/landingpage.png">
+        <a class="button" href="about.html"><div >Get to Know Me</div></a>
+      </div>
+
+      <div class="image-container" style="position:absolute; margin-top: -7.5%; margin-left: -5%; width: 110%">
+        <img src="images/wavy-transition.png">
+      </div>
+    </div>
+
+    <div class="content">
+      <h1 class="header" style="margin-top:20%; margin-left: -1%;">
+        <div class="page-header-thin">
+          Gateway to
+        </div> 
+        <br>
+        <div class="page-header-large boujee-text">
+          Innovation
+        </div>
+        <div class="page-header-large boujee-text" style="margin-top: -10vw;">
+          —
+        </div>
+      </h1>
+
+      
+      Here is some text that introduces or something; 
+      Lorem ipsum dolor sit amet, consectetur adipiscing 
+      elit, sed do eiusmod tempor incididunt ut labore et 
+      dolore magna aliqua. Ut enim ad minim veniam, quis 
+      nostrud exercitation ullamco laboris nisi ut aliquip 
+      ex ea commodo consequat. Duis aute irure dolor in 
+      reprehenderit in voluptate velit esse cillum dolore 
+      eu fugiat nulla pariatur. Excepteur sint occaecat 
+      cupidatat non proident, sunt in culpa qui officia 
+      deserunt mollit anim id est laborum.
+    </div>
+
+    <div  class="content graphic-div" 
+          style="background-image: url(images/image-graphic1.png); color: white;">
+
+      <div class="graphic-div-header">  
+        <h1>I am David Mason</h1>
+      </div>
+      <div class="graphic-body">
+        Here is some multiline text that is meant to be replaced with actual finalized content. This is just filler. Replace before use.
+      </div>
+    </div>
+
+    <div class="graphic-transition">
+      <img src="images/graphic-transition.png"/>
+    </div>
+
+    <div  class="content graphic-div" 
+          style= "background-image: url(images/image-graphic2.png); 
+                  color: white;
+                  margin-top: 0;">
+
+      <div class="graphic-div-header-right" style="padding-top: 8vw;">  
+        <h1 style="line-height: 80%;">Computer Science <br><b style="font-size: 7vw; font-weight: 100;">×</b> <i style="font-weight: 100;">Graphic Design</i></h1>
+      </div>
+      <div class="graphic-body-right">
+        Here is some multiline text that is meant to be replaced with actual finalized content. This is just filler. Replace before use.
+      </div>
+    </div>
+
+    <div class="graphic-transition">
+      <img src="images/graphic-transition2.png"/>
+    </div>
+
+    <div  class="content graphic-div" 
+          style= "background-image: url(images/image-graphic3.png); 
+                  color: white;
+                  margin-top: 0;">
+
+      <div class="graphic-div-header alt-header-shadow" style="padding-top: 8vw;">  
+        <h1>Projects & Ambitions</h1>
+      </div>
+      <div class="graphic-body alt-body-shadow">
+        Here is some multiline text that is meant to be replaced with actual finalized content. This is just filler. Replace before use.
+      </div>
+    </div>
+
+
+    <div class="card-holder" style="background-color: #5438DC;">
+      <h1 style="margin-left: 6vw; padding-top: 1%; text-align: left; color: white;">Top Projects</h1>
+        <div class="card" style="background-image: url(images/eagle-project.jpeg);">
+          <div class="card-content">
+            <p class="card-title">ThreadKind</p>
+            <p class="card-text">Masks n stuff</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: url(images/calc-photo.png);">
+          <div class="card-content">
+            <p class="card-title">String2Math</p>
+            <p class="card-text">Maths n stuff</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: url(images/html-photo.png);">
+          <div class="card-content">
+            <p class="card-title">&lt;WebDev&gt;</p>
+            <p class="card-text">HTML n stuff</p>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer" style="margin-top: 5vw;">
+      <div class="hl"></div>
+      <img class="footer-logo" src="images/david-logo.png">
+      <div class="hl-right"></div>
+      <div class="copyright">© David Mason, 2023</div>
+    </div>
+
+  </body>
+</html>
